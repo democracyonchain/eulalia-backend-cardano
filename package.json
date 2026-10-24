@@ -1,0 +1,30 @@
+{
+  "name": "eulalia-backend-cardano",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Demo-ready Cardano Preview transaction backend for the CNE institutional wallet",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx watch src/server.ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "start": "node dist/src/server.js",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "wallet:generate": "tsx scripts/generate-wallet.ts"
+  },
+  "dependencies": {
+    "@fastify/sensible": "^6.0.3",
+    "@lucid-evolution/lucid": "^0.4.27",
+    "dotenv": "^16.4.7",
+    "fastify": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "prettier": "^3.5.3",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}
